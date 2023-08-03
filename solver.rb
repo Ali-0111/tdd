@@ -8,4 +8,6 @@ class Solver
       1
     end
   end
+
+  
 end
