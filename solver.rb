@@ -1,24 +1,21 @@
 class Solver
   def factorial(input)
-    if input < 0
-      raise ArgumentError, 'Input can not be negative, choose 0 or greater'
-    end
+    raise ArgumentError, 'Input can not be negative, choose 0 or greater' if input.negative?
 
-    if input == 0 || input == 1
-      return 1
-    end
+    return 1 if [0, 1].include?(input)
+
     input * factorial(input - 1)
   end
 
-  def fizzbuzz(n)
-    if n % 3 == 0 && n % 5 == 0
+  def fizzbuzz(numb)
+    if (numb % 3).zero? && (numb % 5).zero?
       'fizzbuzz'
-    elsif n % 3 == 0
+    elsif (numb % 3).zero?
       'fizz'
-    elsif n % 5 == 0
+    elsif (numb % 5).zero?
       'buzz'
     else
-      n.to_s
+      numb.to_s
     end
   end
 
@@ -30,4 +27,3 @@ class Solver
     reversed_word
   end
 end
-
