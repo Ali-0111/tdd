@@ -7,3 +7,29 @@ describe 'Factorial' do
     expect(solver.factorial(1)).to eq(1)
   end
 end
+
+describe 'FizzBuzz' do
+  it 'returns "fizz" when divisible by 3' do
+    expect(fizzbuzz(3)).to eq('fizz')
+    expect(fizzbuzz(9)).to eq('fizz')
+    # Add more test cases
+  end
+
+  it 'returns "buzz" when divisible by 5' do
+    expect(fizzbuzz(5)).to eq('buzz')
+    expect(fizzbuzz(10)).to eq('buzz')
+    # Add more test cases
+  end
+
+  it 'returns "fizzbuzz" when divisible by 3 and 5' do
+    expect(fizzbuzz(15)).to eq('fizzbuzz')
+    expect(fizzbuzz(30)).to eq('fizzbuzz')
+    # Add more test cases
+  end
+
+  it 'returns the number as a string when not divisible by 3 or 5' do
+    expect(fizzbuzz(7)).to eq('7')
+    expect(fizzbuzz(22)).to eq('22')
+    # Add more test cases
+  end
+end
